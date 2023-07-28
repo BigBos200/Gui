@@ -30,16 +30,10 @@ public class Unit6 extends AppCompatActivity {
 
 
 
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                ReadFromFile read = new ReadFromFile();
 
-                read.readFocus();
+        ReadFromFile read = new ReadFromFile();
+        read.readFocus();
 
-            }
-        };
-        runnable.run();
         displayResults();
 
     }
@@ -58,6 +52,7 @@ public class Unit6 extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+
 
 
             }
