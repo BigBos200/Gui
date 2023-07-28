@@ -1,0 +1,85 @@
+package com.example.gui;
+
+import static androidx.core.content.ContextCompat.startActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+
+import com.example.gui.Focus.Focus3;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, CardView {
+
+    private androidx.cardview.widget.CardView Focus1, Focus2, Focus3, Focus4, Focus5;
+    private ImageButton Settings;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        cardView(Focus1, R.id.Focus1);
+        cardView(Focus2, R.id.Focus2);
+        cardView(Focus3, R.id.Focus3);
+        cardView(Focus4, R.id.Focus4);
+        cardView(Focus5, R.id.Focus5);
+
+        Settings = findViewById(R.id.Settings);
+        Settings.setOnClickListener(this);
+
+
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        choseFocus(v);
+    }
+
+    @Override
+    public void cardView(androidx.cardview.widget.CardView name, int id) {
+        name = findViewById(id);
+        name.setOnClickListener((View.OnClickListener) this);
+    }
+
+
+    private void choseFocus(View v){
+
+        Intent i;
+
+        switch (v.getId()) {
+
+            case R.id.Focus1:
+                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus1.class);
+                startActivity(i);
+                break;
+            case R.id.Focus2:
+                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus2.class);
+                startActivity(i);
+                break;
+            case R.id.Focus3:
+                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus3.class);
+                startActivity(i);
+                break;
+            case R.id.Focus4:
+                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus4.class);
+                startActivity(i);
+                break;
+            case R.id.Focus5:
+                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus5.class);
+                startActivity(i);
+                break;
+            case R.id.Settings:
+                i = new Intent(MainActivity.this, Settings.class);
+                startActivity(i);
+                break;
+
+        }
+    }
+
+}
