@@ -23,6 +23,8 @@ public class ReadFromFile<T,U> {
     private T efocus;
     private U eunit;
 
+    private String name = "Adam";
+
     public ReadFromFile(T efocus, U eunit) {
         this.efocus = efocus;
         this.eunit = eunit;
@@ -69,8 +71,6 @@ public class ReadFromFile<T,U> {
                     }
 
 
-                } catch (FileNotFoundException e) {
-                    throw new RuntimeException(e);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
