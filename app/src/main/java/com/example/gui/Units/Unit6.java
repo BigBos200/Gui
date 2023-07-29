@@ -28,13 +28,8 @@ public class Unit6 extends AppCompatActivity {
         editTxt6 = findViewById(R.id.editTxt6);
         txtView6 = findViewById(R.id.txtView6);
 
-
-
-
-        ReadFromFile read = new ReadFromFile();
-        read.readFocus();
-
         displayResults();
+
 
     }
 
@@ -53,7 +48,7 @@ public class Unit6 extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
 
-
+                ReadFromFile<EditText, TextView> read = new ReadFromFile<>(editTxt6, txtView6);
 
             }
         });

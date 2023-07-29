@@ -6,6 +6,8 @@ import android.widget.Toast;
 
 import com.example.gui.Focus.Efocus;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,16 +28,13 @@ public class ReadFromFile<T,U> {
         this.eunit = eunit;
     }
 
-    public ReadFromFile(){
-
-    }
 
     public void readFocus(){
         readFromEfocus(efocus, eunit);
     }
 
 
-    private void readFromEfocus(T efocus, U eunit) {
+    private void readFromEfocus(@NotNull T efocus, U eunit) {
         String path = Environment.getExternalStorageDirectory().toString();
 
         if (efocus.equals(Efocus.EFOCUS1)) {
@@ -92,6 +91,7 @@ public class ReadFromFile<T,U> {
         }
 
     }
+
 
 
 

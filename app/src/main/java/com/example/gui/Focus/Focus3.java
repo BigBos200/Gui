@@ -77,6 +77,7 @@ public class Focus3 extends AppCompatActivity implements View.OnClickListener, C
                 break;
             case R.id.Unit6:
                 ReadFromFile<Efocus, Efocus> sf6 = new ReadFromFile<>(Efocus.EFOCUS3, Efocus.EUNIT6);
+                sf6.readFocus();
                 i = new Intent(Focus3.this, com.example.gui.Units.Unit6.class);
                 startActivity(i);
                 break;
