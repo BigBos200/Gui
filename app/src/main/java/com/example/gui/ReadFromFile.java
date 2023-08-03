@@ -2,7 +2,11 @@ package com.example.gui;
 
 
 import android.os.Environment;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gui.Focus.Efocus;
 
@@ -16,18 +20,27 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
-public class ReadFromFile<T,U> {
+public class ReadFromFile<T,U>{
 
     private HashMap<String, String> words = new HashMap<>();
     private T efocus;
     private U eunit;
 
-    private String name = "Adam";
 
     public ReadFromFile(T efocus, U eunit) {
         this.efocus = efocus;
         this.eunit = eunit;
+    }
+
+
+    private EditText editText;
+    private TextView textView;
+
+    public ReadFromFile(EditText editText, TextView textView){
+        this.editText = editText;
+        this.textView = textView;
     }
 
 
@@ -75,6 +88,21 @@ public class ReadFromFile<T,U> {
                     throw new RuntimeException(e);
                 }
 
+//                File file6 = new File(path + "/Download/Gui/Focus3/Unit6.txt");
+//                try {
+//                    Scanner read = new Scanner(file6);
+//                    while (read.hasNextLine()){
+//                        words.put(read.nextLine(), read.nextLine());
+//                    }
+//                } catch (FileNotFoundException e) {
+//                    throw new RuntimeException(e);
+//                }
+//
+//                for (Map.Entry<String, String> x : words.entrySet()){
+//                    System.out.println(x.getKey() + " " +  x.getValue());
+//                }
+
+
             }else if (eunit.equals(Efocus.EUNIT7)){
 
             }else if (eunit.equals(Efocus.EUNIT8)){
@@ -92,8 +120,39 @@ public class ReadFromFile<T,U> {
 
     }
 
+    public void read(){
+        readFromHashMap(editText, textView);
+    }
 
 
+    private void readFromHashMap(EditText inputText, TextView outputText){
+
+        inputText.findViewById(R.id.txtView6);
+        outputText.findViewById(R.id.editTxt6);
+
+
+//        switch (inputText.toString()){
+//            case "editTxt6":
+//                inputText.findViewById(R.id.txtView6);
+//                break;
+//
+//        }
+//
+//        switch (outputText.toString()){
+//            case "editTxt6":
+//                outputText.findViewById(R.id.editTxt6);
+//                break;
+//
+//        }
+
+        for (Map.Entry<String, String> x : words.entrySet()){
+            if (inputText.getText().toString().equals(x.getValue())){
+                outputText.setText(x.getKey());
+            } else if (inputText.getText().toString().equals(x.getKey())) {
+                outputText.setText(x.getValue());
+            }
+        }
+    }
 
 
 }

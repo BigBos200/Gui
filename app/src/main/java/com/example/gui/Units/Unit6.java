@@ -48,8 +48,8 @@ public class Unit6 extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
 
-                ReadFromFile<EditText, TextView> read = new ReadFromFile<>(editTxt6, txtView6);
-
+                ReadFromFile read = new ReadFromFile(editTxt6, txtView6);
+                read.read();
             }
         });
     }
