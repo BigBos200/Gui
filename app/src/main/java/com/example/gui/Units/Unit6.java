@@ -47,7 +47,7 @@ public class Unit6 extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                
                 ReadFromFile read = new ReadFromFile(editTxt6, txtView6);
                 read.read();
             }
