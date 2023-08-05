@@ -2,10 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
@@ -17,46 +18,76 @@
         android:theme="@style/Theme.Gui"
         tools:targetApi="31">
         <activity
-            android:name=".Units.Unit8"
+            android:name=".Unit1"
             android:exported="false" />
         <activity
-            android:name=".Units.Unit7"
+            android:name=".Unit8"
             android:exported="false" />
         <activity
-            android:name=".Units.Unit6"
+            android:name=".Unit7"
             android:exported="false" />
         <activity
-            android:name=".Units.Unit5"
+            android:name=".Unit6"
             android:exported="false" />
         <activity
-            android:name=".Units.Unit4"
+            android:name=".Unit5"
             android:exported="false" />
         <activity
-            android:name=".Units.Unit3"
+            android:name=".Unit4"
             android:exported="false" />
         <activity
-            android:name=".Units.Unit2"
+            android:name=".Unit3"
             android:exported="false" />
         <activity
-            android:name=".Units.Unit1"
+            android:name=".Unit2"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Focus.Focus3.Units.Unit8"
             android:exported="false" />
         <activity
-            android:name=".Settings"
+            android:name=".Focus.Focus3.Units.Unit7"
             android:exported="false" />
         <activity
-            android:name=".Focus.Focus5"
+            android:name=".Focus.Focus3.Units.Unit6"
             android:exported="false" />
         <activity
-            android:name=".Focus.Focus4"
+            android:name=".Focus.Focus3.Units.Unit5"
             android:exported="false" />
         <activity
-            android:name=".Focus.Focus3"
+            android:name=".Focus.Focus3.Units.Unit4"
             android:exported="false" />
         <activity
-            android:name=".Focus.Focus2"
+            android:name=".Focus.Focus3.Units.Unit3"
             android:exported="false" />
         <activity
-            android:name=".Focus.Focus1"
+            android:name=".Focus.Focus3.Units.Unit2"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus3.Units.Unit1"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Settings.Settings"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus5.Focus5"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus4.Focus4"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus3.Focus3"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus2.Focus2"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus1.Focus1"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
