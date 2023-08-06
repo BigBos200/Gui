@@ -44,43 +44,34 @@ public class Focus3 extends AppCompatActivity implements View.OnClickListener, C
         switch (v.getId()) {
 
             case R.id.Unit1:
-                ReadFromFile<Efocus, Efocus> sfu1 = new ReadFromFile<>(Efocus.EFOCUS3, Efocus.EUNIT1);
                 i = new Intent(Focus3.this, com.example.gui.Focus.Focus3.Units.Unit1.class);
                 startActivity(i);
                 break;
             case R.id.Unit2:
-                ReadFromFile<Efocus, Efocus> sfu2 = new ReadFromFile<>(Efocus.EFOCUS3, Efocus.EUNIT2);
                 i = new Intent(Focus3.this, com.example.gui.Focus.Focus3.Units.Unit2.class);
                 startActivity(i);
                 break;
             case R.id.Unit3:
-                ReadFromFile<Efocus, Efocus> sfu3 = new ReadFromFile<>(Efocus.EFOCUS3, Efocus.EUNIT3);
                 i = new Intent(Focus3.this, com.example.gui.Focus.Focus3.Units.Unit3.class);
                 startActivity(i);
                 break;
             case R.id.Unit4:
-                ReadFromFile<Efocus, Efocus> sfu4 = new ReadFromFile<>(Efocus.EFOCUS3, Efocus.EUNIT4);
                 i = new Intent(Focus3.this, com.example.gui.Focus.Focus3.Units.Unit4.class);
                 startActivity(i);
                 break;
             case R.id.Unit5:
-                ReadFromFile<Efocus, Efocus> sfu5 = new ReadFromFile<>(Efocus.EFOCUS3, Efocus.EUNIT5);
                 i = new Intent(Focus3.this, com.example.gui.Focus.Focus3.Units.Unit5.class);
                 startActivity(i);
                 break;
             case R.id.Unit6:
-                ReadFromFile<Efocus, Efocus> sf6 = new ReadFromFile<>(Efocus.EFOCUS3, Efocus.EUNIT6);
-                sf6.readFocus();
                 i = new Intent(Focus3.this, com.example.gui.Focus.Focus3.Units.Unit6.class);
                 startActivity(i);
                 break;
             case R.id.Unit7:
-                ReadFromFile<Efocus, Efocus> sfu7 = new ReadFromFile<>(Efocus.EFOCUS3, Efocus.EUNIT7);
                 i = new Intent(Focus3.this, com.example.gui.Focus.Focus3.Units.Unit7.class);
                 startActivity(i);
                 break;
             case R.id.Unit8:
-                ReadFromFile<Efocus, Efocus> sfu8 = new ReadFromFile<>(Efocus.EFOCUS3, Efocus.EUNIT8);
                 i = new Intent(Focus3.this, com.example.gui.Focus.Focus3.Units.Unit8.class);
                 startActivity(i);
                 break;

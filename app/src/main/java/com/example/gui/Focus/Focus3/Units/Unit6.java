@@ -34,6 +34,10 @@ public class Unit6 extends AppCompatActivity {
     }
 
     protected void displayResults(){
+
+        ReadFromFile<Efocus, Efocus, EditText, TextView> read = new ReadFromFile<>(Efocus.FOCUS3, Efocus.UNIT6, editTxt6, txtView6);
+        read.readFocus();
+
         editTxt6.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -47,8 +51,6 @@ public class Unit6 extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                
-                ReadFromFile read = new ReadFromFile(editTxt6, txtView6);
                 read.read();
             }
         });
