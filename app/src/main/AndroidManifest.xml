@@ -45,7 +45,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Unit1"
+            android:name=".Focus.Focus1.Units.Unit1"
             android:exported="false" />
         <activity
             android:name=".Focus.Focus3.Units.Unit8"
