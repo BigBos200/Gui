@@ -1,15 +1,11 @@
 package com.example.gui;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-
-import com.example.gui.Focus.Focus3;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, CardView {
 
@@ -55,27 +51,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
 
             case R.id.Focus1:
-                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus1.class);
+                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus1.Focus1.class);
                 startActivity(i);
                 break;
             case R.id.Focus2:
-                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus2.class);
+                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus2.Focus2.class);
                 startActivity(i);
                 break;
             case R.id.Focus3:
-                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus3.class);
+                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus3.Focus3.class);
                 startActivity(i);
                 break;
             case R.id.Focus4:
-                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus4.class);
+                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus4.Focus4.class);
                 startActivity(i);
                 break;
             case R.id.Focus5:
-                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus5.class);
+                i = new Intent(MainActivity.this, com.example.gui.Focus.Focus5.Focus5.class);
                 startActivity(i);
                 break;
             case R.id.Settings:
-                i = new Intent(MainActivity.this, Settings.class);
+                i = new Intent(MainActivity.this, com.example.gui.Focus.Settings.Settings.class);
                 startActivity(i);
                 break;
 

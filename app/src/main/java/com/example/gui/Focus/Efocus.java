@@ -1,20 +1,20 @@
 package com.example.gui.Focus;
 
 public enum Efocus {
-    EFOCUS1,
-    EFOCUS2,
-    EFOCUS3,
-    EFOCUS4,
-    EFOCUS5,
-    ESETTINGS,
+    FOCUS1,
+    FOCUS2,
+    FOCUS3,
+    FOCUS4,
+    FOCUS5,
+    SETTINGS,
 
-    EUNIT1,
-    EUNIT2,
-    EUNIT3,
-    EUNIT4,
-    EUNIT5,
-    EUNIT6,
-    EUNIT7,
-    EUNIT8,
+    UNIT1,
+    UNIT2,
+    UNIT3,
+    UNIT4,
+    UNIT5,
+    UNIT6,
+    UNIT7,
+    UNIT8,
 
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Focus.Focus1">
+    tools:context=".Focus.Focus3.Focus3">
 
     <View
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         />
 
     <TextView
-        android:id="@+id/txtView"
+        android:id="@+id/txtView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Focus3"
