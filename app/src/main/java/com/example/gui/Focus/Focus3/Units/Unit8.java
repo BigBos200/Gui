@@ -19,13 +19,12 @@ public class Unit8 extends AppCompatActivity {
     private TextView txtView;
 
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit8);
-        editTxt = findViewById(R.id.editTxt11);
-        txtView = findViewById(R.id.txtView11);
+        editTxt = findViewById(R.id.editTxt38);
+        txtView = findViewById(R.id.txtView38);
 
         displayResults();
 

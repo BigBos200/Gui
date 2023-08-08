@@ -17,14 +17,13 @@ public class Unit6 extends AppCompatActivity {
 
     private EditText editTxt6;
     private TextView txtView6;
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit6);
 
-        editTxt6 = findViewById(R.id.editTxt6);
-        txtView6 = findViewById(R.id.txtView6);
+        editTxt6 = findViewById(R.id.editTxt36);
+        txtView6 = findViewById(R.id.txtView36);
 
         displayResults();
 

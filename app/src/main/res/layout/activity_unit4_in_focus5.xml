@@ -36,7 +36,7 @@
                     android:background="@drawable/customize_edit_txt"
                     android:textColor="@color/buttons2"
                     android:textStyle="bold"
-                    android:id="@+id/editTxt6"
+                    android:id="@+id/editTxt54"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -62,7 +62,7 @@
                     android:textStyle="bold"
                     android:background="@drawable/customize_edit_txt"
                     android:textColor="@color/buttons2"
-                    android:id="@+id/txtView6"
+                    android:id="@+id/txtView54"
                     />
             </LinearLayout>
 

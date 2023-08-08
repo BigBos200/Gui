@@ -1,13 +1,12 @@
 package com.example.gui.Focus.Focus2.Units;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gui.Focus.Efocus;
 import com.example.gui.R;
@@ -17,13 +16,13 @@ public class Unit1 extends AppCompatActivity {
     private EditText editTxt;
     private TextView txtView;
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit1_in_focus2);
-        editTxt = findViewById(R.id.editTxt11);
-        txtView = findViewById(R.id.txtView11);
+        editTxt = findViewById(R.id.editTxt21);
+        txtView = findViewById(R.id.txtView21);
 
         displayResults();
 

@@ -17,33 +17,112 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gui"
         tools:targetApi="31">
-        <activity
-            android:name=".Unit8"
-            android:exported="false" />
-        <activity
-            android:name=".Unit7"
-            android:exported="false" />
-        <activity
-            android:name=".Unit6"
-            android:exported="false" />
-        <activity
-            android:name=".Unit5"
-            android:exported="false" />
-        <activity
-            android:name=".Unit4"
-            android:exported="false" />
-        <activity
-            android:name=".Unit3"
-            android:exported="false" />
-        <activity
-            android:name=".Unit2"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name=".Focus.Focus5.Units.Unit8"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus5.Units.Unit7"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus5.Units.Unit6"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus5.Units.Unit5"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus5.Units.Unit4"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus5.Units.Unit3"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus5.Units.Unit2"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus5.Units.Unit1"
+            android:exported="false" />
+
+
+
+        <activity
+            android:name=".Focus.Focus4.Units.Unit8"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus4.Units.Unit7"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus4.Units.Unit6"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus4.Units.Unit5"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus4.Units.Unit4"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus4.Units.Unit3"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus4.Units.Unit2"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus4.Units.Unit1"
+            android:exported="false" />
+
+
+
+        <activity
+            android:name=".Focus.Focus2.Units.Unit8"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus2.Units.Unit7"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus2.Units.Unit6"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus2.Units.Unit5"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus2.Units.Unit4"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus2.Units.Unit3"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus2.Units.Unit2"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus2.Units.Unit1"
+            android:exported="false" />
+
+
+
+        <activity
+            android:name=".Focus.Focus1.Units.Unit8"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus1.Units.Unit7"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus1.Units.Unit6"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus1.Units.Unit5"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus1.Units.Unit4"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus1.Units.Unit3"
+            android:exported="false" />
+        <activity
+            android:name=".Focus.Focus1.Units.Unit2"
+            android:exported="false">
         </activity>
+
+
         <activity
             android:name=".Focus.Focus1.Units.Unit1"
             android:exported="false" />

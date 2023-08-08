@@ -17,13 +17,12 @@ public class Unit1 extends AppCompatActivity {
     private EditText editTxt;
     private TextView txtView;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit1_in_focus4);
-        editTxt = findViewById(R.id.editTxt11);
-        txtView = findViewById(R.id.txtView11);
+        editTxt = findViewById(R.id.editTxt41);
+        txtView = findViewById(R.id.txtView41);
 
         displayResults();
 
