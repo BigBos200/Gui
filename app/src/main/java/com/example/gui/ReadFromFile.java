@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+
 public class ReadFromFile<F,U,E,V>{
 
     private HashMap<String, String> words = new HashMap<>();
@@ -40,9 +41,9 @@ public class ReadFromFile<F,U,E,V>{
 
     private void readFromEfocus(@NotNull Efocus efocus, Efocus eunit, String path) {
 
-        switch (efocus){
+        switch (efocus) {
             case FOCUS1:
-                switch (eunit){
+                switch (eunit) {
                     case UNIT1 -> readFromFile(path, efocus, eunit);
                     case UNIT2 -> readFromFile(path, efocus, eunit);
                     case UNIT3 -> readFromFile(path, efocus, eunit);
@@ -52,9 +53,9 @@ public class ReadFromFile<F,U,E,V>{
                     case UNIT7 -> readFromFile(path, efocus, eunit);
                     case UNIT8 -> readFromFile(path, efocus, eunit);
                 }
-            break;
+                break;
             case FOCUS2:
-                switch (eunit){
+                switch (eunit) {
                     case UNIT1 -> readFromFile(path, efocus, eunit);
                     case UNIT2 -> readFromFile(path, efocus, eunit);
                     case UNIT3 -> readFromFile(path, efocus, eunit);
@@ -64,9 +65,9 @@ public class ReadFromFile<F,U,E,V>{
                     case UNIT7 -> readFromFile(path, efocus, eunit);
                     case UNIT8 -> readFromFile(path, efocus, eunit);
                 }
-            break;
+                break;
             case FOCUS3:
-                switch (eunit){
+                switch (eunit) {
                     case UNIT1 -> readFromFile(path, efocus, eunit);
                     case UNIT2 -> readFromFile(path, efocus, eunit);
                     case UNIT3 -> readFromFile(path, efocus, eunit);
@@ -78,8 +79,8 @@ public class ReadFromFile<F,U,E,V>{
                 }
                 break;
 
-                case FOCUS4:
-                switch (eunit){
+            case FOCUS4:
+                switch (eunit) {
                     case UNIT1 -> readFromFile(path, efocus, eunit);
                     case UNIT2 -> readFromFile(path, efocus, eunit);
                     case UNIT3 -> readFromFile(path, efocus, eunit);
@@ -90,8 +91,8 @@ public class ReadFromFile<F,U,E,V>{
                     case UNIT8 -> readFromFile(path, efocus, eunit);
                 }
                 break;
-                case FOCUS5:
-                switch (eunit){
+            case FOCUS5:
+                switch (eunit) {
                     case UNIT1 -> readFromFile(path, efocus, eunit);
                     case UNIT2 -> readFromFile(path, efocus, eunit);
                     case UNIT3 -> readFromFile(path, efocus, eunit);
@@ -103,11 +104,12 @@ public class ReadFromFile<F,U,E,V>{
                 }
                 break;
 
-                case SETTINGS:
-
-                }
+            case SETTINGS:
+                break;
 
         }
+
+    }
 
     private void readFromFile(String path, Efocus efocus, Efocus eunit){
         File file6 = new File(path + "/Download/Gui/" + efocus.toString() + "/" + eunit.toString() + ".txt");

@@ -7,19 +7,11 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gui.CardView;
-import com.example.gui.Focus.Efocus;
 import com.example.gui.R;
-import com.example.gui.ReadFromFile;
 
 public class Focus3 extends AppCompatActivity implements View.OnClickListener, CardView {
 
     private androidx.cardview.widget.CardView Unit1, Unit2, Unit3, Unit4, Unit5, Unit6, Unit7, Unit8;
-
-
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +31,12 @@ public class Focus3 extends AppCompatActivity implements View.OnClickListener, C
 
     @Override
     public void onClick(View v) {
+        choseUnit(v);
+    }
+
+    private void choseUnit(View v){
         Intent i;
+
 
         switch (v.getId()) {
 
@@ -77,6 +74,8 @@ public class Focus3 extends AppCompatActivity implements View.OnClickListener, C
                 break;
         }
     }
+
+
 
     @Override
     public void cardView(androidx.cardview.widget.CardView name, int id) {
