@@ -1,6 +1,6 @@
-*.idea/
+*.iml
+.idea/
 .idea/misc.xml
-.iml
 .gradle
 /local.properties
 /.idea/caches
