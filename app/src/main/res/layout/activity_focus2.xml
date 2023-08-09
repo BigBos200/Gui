@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Focus.Focus2.Focus2">
+    tools:context=".Focus.Focus2.Focus2"
+    android:background="@color/buttons2"
+    >
+
 
     <View
         android:layout_width="match_parent"

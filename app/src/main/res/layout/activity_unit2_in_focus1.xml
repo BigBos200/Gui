@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Focus.Focus1.Units.Unit2">
+    tools:context=".Focus.Focus1.Units.Unit2"
+    android:background="@color/buttons2"
+    >
 
     <GridLayout
         android:layout_width="match_parent"
