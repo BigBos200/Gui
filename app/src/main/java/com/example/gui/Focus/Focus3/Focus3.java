@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.gui.CardView;
 import com.example.gui.R;
 
+import java.util.Objects;
+
 public class Focus3 extends AppCompatActivity implements View.OnClickListener, CardView {
 
     private androidx.cardview.widget.CardView Unit1, Unit2, Unit3, Unit4, Unit5, Unit6, Unit7, Unit8;
@@ -17,6 +19,8 @@ public class Focus3 extends AppCompatActivity implements View.OnClickListener, C
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
 
         cardView(Unit1, R.id.Unit1);
         cardView(Unit2, R.id.Unit2);
