@@ -161,7 +161,9 @@
             android:exported="false" />
         <activity
             android:name=".Focus.Focus3.Focus3"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".Focus.Focus2.Focus2"
             android:exported="false" />
