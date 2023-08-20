@@ -4,21 +4,31 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.gui.CardView;
 import com.example.gui.R;
 
+import java.util.Objects;
+
 public class Focus1 extends AppCompatActivity implements View.OnClickListener, CardView {
 
     private androidx.cardview.widget.CardView Unit1, Unit2, Unit3, Unit4, Unit5, Unit6, Unit7, Unit8;
-
+    private Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_focus1);
+        toolbar = findViewById(R.id.myToolBar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        Objects.requireNonNull(actionBar).setDisplayHomeAsUpEnabled(true);
+
+
         cardView(Unit1, R.id.Unit1);
         cardView(Unit2, R.id.Unit2);
         cardView(Unit3, R.id.Unit3);

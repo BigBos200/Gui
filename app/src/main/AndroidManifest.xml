@@ -134,7 +134,9 @@
             android:exported="false" />
         <activity
             android:name=".Focus.Focus3.Units.Unit6"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Focus.Focus3.Focus3"
+            />
         <activity
             android:name=".Focus.Focus3.Units.Unit5"
             android:exported="false" />
@@ -150,15 +152,24 @@
         <activity
             android:name=".Focus.Focus3.Units.Unit1"
             android:exported="false" />
+
+
+
         <activity
             android:name=".Focus.Settings.Settings"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".Focus.Focus5.Focus5"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".Focus.Focus4.Focus4"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".Focus.Focus3.Focus3"
             android:exported="false"
@@ -166,10 +177,14 @@
             />
         <activity
             android:name=".Focus.Focus2.Focus2"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".Focus.Focus1.Focus1"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true">

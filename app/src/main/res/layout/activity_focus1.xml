@@ -8,11 +8,24 @@
     android:background="@color/buttons2"
     >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar1">
+
+        <include
+            layout="@layout/appbar"
+
+            />
+
+    </LinearLayout>
+
     <View
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="140dp"
         android:background="@drawable/bacground1"
         android:id="@+id/topViev"
+        android:layout_below="@+id/toolbar1"
 
         />
 

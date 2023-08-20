@@ -8,15 +8,6 @@
     android:background="@color/buttons2"
     >
 
-    <include
-        layout="@layout/appbar"
-
-        />
-
-
-
-
-
 
     <View
         android:layout_width="match_parent"

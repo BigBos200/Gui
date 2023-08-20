@@ -7,22 +7,35 @@
     android:background="@color/buttons2"
     >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar36">
+        >
+    <include
+
+        layout="@layout/appbar"
+
+        />
+    </LinearLayout>
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="370dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:columnCount="1"
         android:rowCount="2"
+        android:layout_below="@+id/toolbar36"
         >
 
 
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="165dp"
+            android:layout_height="130dp"
             android:layout_column="0"
             android:layout_row="0"
             >
@@ -44,10 +57,10 @@
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-3
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="165dp"
+            android:layout_height="130dp"
             android:layout_column="0"
             android:layout_row="1"
             android:layout_marginTop="10dp"
