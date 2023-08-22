@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import androidx.appcompat.widget.Toolbar;
-
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,8 +12,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private androidx.cardview.widget.CardView Focus1, Focus2, Focus3, Focus4, Focus5;
     private ImageButton Settings;
 
-    private Toolbar toolbar;
-
 
 
     @Override
@@ -23,8 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.myToolBar);
-        setSupportActionBar(toolbar);
+
 
         cardView(Focus1, R.id.Focus1);
         cardView(Focus2, R.id.Focus2);
