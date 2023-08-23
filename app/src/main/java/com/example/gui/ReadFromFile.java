@@ -1,8 +1,10 @@
 package com.example.gui;
 
 
+import android.content.Context;
 import android.os.Environment;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.gui.Focus.Efocus;
@@ -16,13 +18,16 @@ import java.util.Map;
 import java.util.Scanner;
 
 
-public class ReadFromFile<F,U,E,V>{
+public class ReadFromFile<F,U,E,V> {
 
     private HashMap<String, String> words = new HashMap<>();
+
+    private Context context;
     private Efocus efocus;
     private Efocus eunit;
     private EditText editText;
     private TextView textView;
+    private ListView listView;
     private String path = Environment.getExternalStorageDirectory().toString();
 
 
@@ -31,6 +36,8 @@ public class ReadFromFile<F,U,E,V>{
         this.eunit = (Efocus) eunit;
         this.editText = (EditText) editText;
         this.textView = (TextView) textView;
+        this.listView = (ListView) listView;
+//        this.context = (Context) context;
 
     }
 
@@ -128,7 +135,6 @@ public class ReadFromFile<F,U,E,V>{
     }
 
 
-
     public void read(){
         readFromHashMap(editText, textView);
     }
@@ -143,6 +149,18 @@ public class ReadFromFile<F,U,E,V>{
             }
         }
     }
+
+    public void setToListView(){
+
+    }
+
+
+    private void getFromHashMap(){
+
+    }
+
+
+
 
 
 }

@@ -1,9 +1,11 @@
 package com.example.gui.Focus.Focus3.Units;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
@@ -21,6 +23,12 @@ public class Unit6 extends AppCompatActivity {
     private EditText editTxt6;
     private TextView txtView6;
     private Toolbar toolbar;
+    private ListView listView;
+
+    private final Context context = this;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,16 +40,18 @@ public class Unit6 extends AppCompatActivity {
 
         editTxt6 = findViewById(R.id.editTxt36);
         txtView6 = findViewById(R.id.txtView36);
+        listView = findViewById(R.id.listView36);
 
-        displayResults();
+        displayResults(editTxt6, txtView6, listView, context);
 
 
     }
 
-    protected void displayResults(){
+    protected void displayResults(EditText editTxt6, TextView txtView6, ListView listView, Context context){
 
         ReadFromFile<Efocus, Efocus, EditText, TextView> read = new ReadFromFile<>(Efocus.FOCUS3, Efocus.UNIT6, editTxt6, txtView6);
         read.readFocus();
+
 
         editTxt6.addTextChangedListener(new TextWatcher() {
             @Override
