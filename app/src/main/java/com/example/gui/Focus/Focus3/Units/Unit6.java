@@ -25,7 +25,7 @@ public class Unit6 extends AppCompatActivity {
     private Toolbar toolbar;
     private ListView listView;
 
-    private final Context context = this;
+    private Context context;
 
 
 
@@ -33,6 +33,7 @@ public class Unit6 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit6);
+        context = getApplicationContext();
         toolbar = findViewById(R.id.myToolBar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
@@ -42,17 +43,21 @@ public class Unit6 extends AppCompatActivity {
         txtView6 = findViewById(R.id.txtView36);
         listView = findViewById(R.id.listView36);
 
-        displayResults(editTxt6, txtView6, listView, context);
+
+
+
+        displayResults(editTxt6, txtView6, context);
 
 
     }
 
-    protected void displayResults(EditText editTxt6, TextView txtView6, ListView listView, Context context){
+    protected void displayResults(EditText editTxt6, TextView txtView6, Context aplicationContext){
 
         ReadFromFile<Efocus, Efocus, EditText, TextView> read = new ReadFromFile<>(Efocus.FOCUS3, Efocus.UNIT6, editTxt6, txtView6);
         read.readFocus();
 
-
+        ReadFromFile read1 = new ReadFromFile(aplicationContext);
+        listView.setAdapter(read1);
         editTxt6.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

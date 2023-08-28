@@ -25,6 +25,7 @@
                 android:text="Rash"
                 android:textColor="@color/buttons2"
                 android:textSize="30dp"
+                android:id="@+id/leftTxt"
                 />
 
         </LinearLayout>
@@ -43,6 +44,7 @@
                 android:text="Rash"
                 android:textColor="@color/buttons2"
                 android:textSize="30dp"
+                android:id="@+id/rightTxt"
                 />
 
         </LinearLayout>

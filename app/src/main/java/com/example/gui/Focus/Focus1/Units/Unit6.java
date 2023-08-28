@@ -1,13 +1,15 @@
 package com.example.gui.Focus.Focus1.Units;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.gui.Focus.Efocus;
 import com.example.gui.R;
@@ -16,6 +18,10 @@ import com.example.gui.ReadFromFile;
 public class Unit6 extends AppCompatActivity {
     private EditText editTxt16;
     private TextView txtView16;
+    private Toolbar toolbar;
+    private ListView listView;
+
+    private final Context context = getApplicationContext();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +30,16 @@ public class Unit6 extends AppCompatActivity {
         editTxt16 = findViewById(R.id.editTxt16);
         txtView16 = findViewById(R.id.txtView16);
 
-        displayResults();
+        displayResults(editTxt16, txtView16);
 
 
     }
 
-    protected void displayResults(){
+    protected void displayResults(EditText editTxt6, TextView txtView6){
 
-        ReadFromFile<Efocus, Efocus, EditText, TextView> read = new ReadFromFile<>(Efocus.FOCUS3, Efocus.UNIT6, editTxt16, txtView16);
+        ReadFromFile<Efocus, Efocus, EditText, TextView> read = new ReadFromFile<>(Efocus.FOCUS3, Efocus.UNIT6, editTxt6, txtView6);
         read.readFocus();
+
 
         editTxt16.addTextChangedListener(new TextWatcher() {
             @Override

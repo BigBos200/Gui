@@ -2,9 +2,13 @@ package com.example.gui;
 
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Environment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.gui.Focus.Efocus;
@@ -13,21 +17,25 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 
-public class ReadFromFile<F,U,E,V> {
+public class ReadFromFile<F,U,E,V> extends BaseAdapter {
 
     private HashMap<String, String> words = new HashMap<>();
+    private ArrayList<String> listWords = new ArrayList<>();
 
-    private Context context;
+    private TextView leftTxt;
+    private TextView rightTxt;
+//    private Context aplicationContext;
     private Efocus efocus;
     private Efocus eunit;
     private EditText editText;
     private TextView textView;
-    private ListView listView;
+//    private LayoutInflater inflater;
     private String path = Environment.getExternalStorageDirectory().toString();
 
 
@@ -36,8 +44,10 @@ public class ReadFromFile<F,U,E,V> {
         this.eunit = (Efocus) eunit;
         this.editText = (EditText) editText;
         this.textView = (TextView) textView;
-        this.listView = (ListView) listView;
-//        this.context = (Context) context;
+    }
+
+    public ReadFromFile(Context context){
+        this.context = (Context) context;
 
     }
 
@@ -123,6 +133,7 @@ public class ReadFromFile<F,U,E,V> {
         try {
             Scanner read = new Scanner(file6);
             while (read.hasNextLine()){
+                listWords.add(read.nextLine());
                 words.put(read.nextLine(), read.nextLine());
             }
         } catch (FileNotFoundException e) {
@@ -131,6 +142,15 @@ public class ReadFromFile<F,U,E,V> {
 
         for (Map.Entry<String, String> x : words.entrySet()){
             System.out.println(x.getKey() + " " +  x.getValue());
+        }
+
+        firstStream();
+    }
+
+    private void firstStream(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            listWords
+                    .forEach(System.out::println);
         }
     }
 
@@ -150,17 +170,37 @@ public class ReadFromFile<F,U,E,V> {
         }
     }
 
-    public void setToListView(){
 
+
+    @Override
+    public int getCount() {
+        return listWords.toArray().length;
     }
 
-
-    private void getFromHashMap(){
-
+    @Override
+    public Object getItem(int position) {
+        return null;
     }
 
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+
+    private Context context;
+    LayoutInflater inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
 
 
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        View convertView1 = inflater.inflate(R.layout.list_layout, null);
+        leftTxt = convertView.findViewById(R.id.leftTxt);
+        rightTxt = convertView.findViewById(R.id.rightTxt);
+
+        leftTxt.setText(listWords.get(position));
+//        rightTxt.setText(listWords.get(position));
 
 
+        return convertView1;
+    }
 }
