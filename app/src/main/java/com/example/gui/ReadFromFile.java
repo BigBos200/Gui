@@ -1,13 +1,8 @@
 package com.example.gui;
 
 
-import android.content.Context;
 import android.os.Build;
 import android.os.Environment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -23,7 +18,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 
-public class ReadFromFile<F,U,E,V> extends BaseAdapter {
+public class ReadFromFile<F,U,E,V>  {
 
     private HashMap<String, String> words = new HashMap<>();
     private ArrayList<String> listWords = new ArrayList<>();
@@ -46,10 +41,10 @@ public class ReadFromFile<F,U,E,V> extends BaseAdapter {
         this.textView = (TextView) textView;
     }
 
-    public ReadFromFile(Context context){
-        this.context = (Context) context;
-
-    }
+//    public ReadFromFile(Context context){
+//        this.context = (Context) context;
+//
+//    }
 
     public void readFocus(){
         readFromEfocus(efocus, eunit, path);
@@ -133,7 +128,7 @@ public class ReadFromFile<F,U,E,V> extends BaseAdapter {
         try {
             Scanner read = new Scanner(file6);
             while (read.hasNextLine()){
-                listWords.add(read.nextLine());
+//                listWords.add(read.nextLine());
                 words.put(read.nextLine(), read.nextLine());
             }
         } catch (FileNotFoundException e) {
@@ -172,35 +167,35 @@ public class ReadFromFile<F,U,E,V> extends BaseAdapter {
 
 
 
-    @Override
-    public int getCount() {
-        return listWords.toArray().length;
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return null;
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    private Context context;
-    LayoutInflater inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
-
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View convertView1 = inflater.inflate(R.layout.list_layout, null);
-        leftTxt = convertView.findViewById(R.id.leftTxt);
-        rightTxt = convertView.findViewById(R.id.rightTxt);
-
-        leftTxt.setText(listWords.get(position));
-//        rightTxt.setText(listWords.get(position));
-
-
-        return convertView1;
-    }
+//    @Override
+//    public int getCount() {
+//        return listWords.toArray().length;
+//    }
+//
+//    @Override
+//    public Object getItem(int position) {
+//        return null;
+//    }
+//
+//    @Override
+//    public long getItemId(int position) {
+//        return 0;
+//    }
+//
+//    private Context context;
+//    LayoutInflater inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
+//
+//
+//    @Override
+//    public View getView(int position, View convertView, ViewGroup parent) {
+//        View convertView1 = inflater.inflate(R.layout.list_layout, null);
+//        leftTxt = convertView.findViewById(R.id.leftTxt);
+//        rightTxt = convertView.findViewById(R.id.rightTxt);
+//
+//        leftTxt.setText(listWords.get(position));
+////        rightTxt.setText(listWords.get(position));
+//
+//
+//        return convertView1;
+//    }
 }

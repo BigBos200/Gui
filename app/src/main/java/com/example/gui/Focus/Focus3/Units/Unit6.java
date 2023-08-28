@@ -4,6 +4,9 @@ import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -26,7 +29,7 @@ public class Unit6 extends AppCompatActivity {
     private ListView listView;
 
     private Context context;
-
+    String[] fruits = {"Apple", "Orange", "Banana", "Kivi"};
 
 
     @Override
@@ -43,8 +46,8 @@ public class Unit6 extends AppCompatActivity {
         txtView6 = findViewById(R.id.txtView36);
         listView = findViewById(R.id.listView36);
 
-
-
+        CustomAdapter customAdapter = new CustomAdapter();
+        listView.setAdapter(customAdapter);
 
         displayResults(editTxt6, txtView6, context);
 
@@ -56,8 +59,8 @@ public class Unit6 extends AppCompatActivity {
         ReadFromFile<Efocus, Efocus, EditText, TextView> read = new ReadFromFile<>(Efocus.FOCUS3, Efocus.UNIT6, editTxt6, txtView6);
         read.readFocus();
 
-        ReadFromFile read1 = new ReadFromFile(aplicationContext);
-        listView.setAdapter(read1);
+//        ReadFromFile read1 = new ReadFromFile(aplicationContext);
+//        listView.setAdapter(read1);
         editTxt6.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -74,5 +77,39 @@ public class Unit6 extends AppCompatActivity {
                 read.read();
             }
         });
+    }
+
+
+    private class CustomAdapter extends BaseAdapter {
+        private TextView leftTxt, rightTxt;
+
+        @Override
+        public int getCount() {
+            return fruits.length;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            View view1 = getLayoutInflater().inflate(R.layout.list_layout, null);
+
+            leftTxt = view1.findViewById(R.id.leftTxt);
+            rightTxt = view1.findViewById(R.id.rightTxt);
+
+            leftTxt.setText(fruits[position]);
+            rightTxt.setText(fruits[position]);
+
+            return view1;
+        }
     }
 }
