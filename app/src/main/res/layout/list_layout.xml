@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:background="@color/buttons1"
         >
 
@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:text="Rash"
                 android:textColor="@color/buttons2"
-                android:textSize="30dp"
+                android:textSize="20dp"
                 android:id="@+id/leftTxt"
                 />
 
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:text="Rash"
                 android:textColor="@color/buttons2"
-                android:textSize="30dp"
+                android:textSize="20dp"
                 android:id="@+id/rightTxt"
                 />
 

@@ -59,7 +59,6 @@ public class Unit6 extends AppCompatActivity {
         read.readFocus();
 
         WordsListAdapter adapter = new WordsListAdapter(this, R.layout.list_layout, wordsList);
-        listView.setAdapter(adapter);
 
         editTxt6.addTextChangedListener(new TextWatcher() {
             @Override
@@ -69,6 +68,7 @@ public class Unit6 extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                listView.setAdapter(adapter);
 
             }
 
