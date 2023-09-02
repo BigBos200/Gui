@@ -41,10 +41,6 @@ public class ReadFromFile<F,U,E,V>  {
         this.textView = (TextView) textView;
     }
 
-//    public ReadFromFile(Context context){
-//        this.context = (Context) context;
-//
-//    }
 
     public void readFocus(){
         readFromEfocus(efocus, eunit, path);
@@ -166,7 +162,7 @@ public class ReadFromFile<F,U,E,V>  {
     }
 
 
-
+//
 //    @Override
 //    public int getCount() {
 //        return listWords.toArray().length;

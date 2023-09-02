@@ -1,12 +1,9 @@
 package com.example.gui.Focus.Focus3.Units;
 
-import android.content.Context;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -18,8 +15,13 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.gui.Focus.Efocus;
 import com.example.gui.R;
 import com.example.gui.ReadFromFile;
+import com.example.gui.WordsListAdapter;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Unit6 extends AppCompatActivity {
 
@@ -27,16 +29,15 @@ public class Unit6 extends AppCompatActivity {
     private TextView txtView6;
     private Toolbar toolbar;
     private ListView listView;
+    private String path = Environment.getExternalStorageDirectory().toString();
+    private ArrayList<String> wordsList = new ArrayList<>();
 
-    private Context context;
-    String[] fruits = {"Apple", "Orange", "Banana", "Kivi"};
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit6);
-        context = getApplicationContext();
         toolbar = findViewById(R.id.myToolBar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
@@ -46,21 +47,20 @@ public class Unit6 extends AppCompatActivity {
         txtView6 = findViewById(R.id.txtView36);
         listView = findViewById(R.id.listView36);
 
-        CustomAdapter customAdapter = new CustomAdapter();
-        listView.setAdapter(customAdapter);
-
-        displayResults(editTxt6, txtView6, context);
+        readFromFile();
+        displayResults(editTxt6, txtView6);
 
 
     }
 
-    protected void displayResults(EditText editTxt6, TextView txtView6, Context aplicationContext){
+    protected void displayResults(EditText editTxt6, TextView txtView6){
 
         ReadFromFile<Efocus, Efocus, EditText, TextView> read = new ReadFromFile<>(Efocus.FOCUS3, Efocus.UNIT6, editTxt6, txtView6);
         read.readFocus();
 
-//        ReadFromFile read1 = new ReadFromFile(aplicationContext);
-//        listView.setAdapter(read1);
+        WordsListAdapter adapter = new WordsListAdapter(this, R.layout.list_layout, wordsList);
+        listView.setAdapter(adapter);
+
         editTxt6.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -79,37 +79,17 @@ public class Unit6 extends AppCompatActivity {
         });
     }
 
-
-    private class CustomAdapter extends BaseAdapter {
-        private TextView leftTxt, rightTxt;
-
-        @Override
-        public int getCount() {
-            return fruits.length;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-            View view1 = getLayoutInflater().inflate(R.layout.list_layout, null);
-
-            leftTxt = view1.findViewById(R.id.leftTxt);
-            rightTxt = view1.findViewById(R.id.rightTxt);
-
-            leftTxt.setText(fruits[position]);
-            rightTxt.setText(fruits[position]);
-
-            return view1;
+    private void readFromFile(){
+        File file6 = new File(path + "/Download/Gui/Focus3/UNIT6.txt");
+        try {
+            Scanner read = new Scanner(file6);
+            while (read.hasNextLine()){
+                wordsList.add(read.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
+
+
 }
