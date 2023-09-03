@@ -58,7 +58,7 @@ public class Unit6 extends AppCompatActivity {
         ReadFromFile<Efocus, Efocus, EditText, TextView> read = new ReadFromFile<>(Efocus.FOCUS3, Efocus.UNIT6, editTxt6, txtView6);
         read.readFocus();
 
-        WordsListAdapter adapter = new WordsListAdapter(this, R.layout.list_layout, wordsList);
+        WordsListAdapter adapter = new WordsListAdapter(this, R.layout.list_layout, wordsList, editTxt6);
 
         editTxt6.addTextChangedListener(new TextWatcher() {
             @Override
