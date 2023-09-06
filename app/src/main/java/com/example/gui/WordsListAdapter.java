@@ -2,7 +2,6 @@ package com.example.gui;
 
 import android.content.Context;
 import android.os.Build;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,18 +82,18 @@ public class WordsListAdapter extends ArrayAdapter<String> {
 //        Log.e("WLA", "Prospector");
 //        prospector();
 
-        ArrayList<String> leftSet = new ArrayList<>();
+//        ArrayList<String> leftSet = new ArrayList<>();
 
         if(wordsClass.getLeftText().contains(editText.getText())){
-            leftSet.add(wordsClass.getLeftText());
-            holder.leftText.setText(leftText);
+            holder.leftText.setText(wordsClass.getLeftText());
+
         }
 
 
 
-        Log.e("WLA", "Prospector");
-        leftSet
-                .forEach(System.out::println);
+//        Log.e("WLA", "Prospector");
+//        leftSet
+//                .forEach(System.out::println);
 
 
 //        holder.rightText.setText(wordsClass.getRightText());
